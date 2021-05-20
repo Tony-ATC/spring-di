@@ -1,4 +1,4 @@
-package udemy.SpringFramework5Guru.springdi.services;
+package com.udemy.SpringFramework5Guru.springdi.pets;
 
 
 public interface PetService {

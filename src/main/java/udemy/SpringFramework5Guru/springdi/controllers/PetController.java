@@ -1,6 +1,6 @@
 package udemy.SpringFramework5Guru.springdi.controllers;
 
-import udemy.SpringFramework5Guru.springdi.services.PetService;
+import com.udemy.SpringFramework5Guru.springdi.pets.PetService;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
