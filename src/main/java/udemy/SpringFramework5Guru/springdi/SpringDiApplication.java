@@ -3,11 +3,8 @@ package udemy.SpringFramework5Guru.springdi;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.stereotype.Component;
 import udemy.SpringFramework5Guru.springdi.controllers.*;
 
-@ComponentScan(basePackages = {"udemy.SpringFramework5Guru.springdi", "com.udemy.SpringFramework5Guru.springdi.pets"})
 @SpringBootApplication
 public class SpringDiApplication {
 
