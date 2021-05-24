@@ -2,14 +2,12 @@ package udemy.SpringFramework5Guru.springdi.config;
 
 import com.udemy.SpringFramework5Guru.springdi.pets.PetService;
 import com.udemy.SpringFramework5Guru.springdi.pets.PetServiceFactory;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
-import org.springframework.context.annotation.Profile;
+import org.springframework.context.annotation.*;
 import udemy.SpringFramework5Guru.springdi.repositories.EnglishGreetingRepository;
 import udemy.SpringFramework5Guru.springdi.repositories.EnglishGreetingRepositoryImpl;
 import udemy.SpringFramework5Guru.springdi.services.*;
 
+@ImportResource("classpath:springdi-config.xml")
 @Configuration
 public class GreetingServiceConfig {
 
@@ -51,11 +49,6 @@ public class GreetingServiceConfig {
     @Bean
     PrimaryGreetingService primaryGreetingService(){
         return new PrimaryGreetingService();
-    }
-
-    @Bean
-    ConstructorGreetingService constructorGreetingService(){
-        return new ConstructorGreetingService();
     }
 
     @Bean
