@@ -4,6 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import udemy.SpringFramework5Guru.springdi.controllers.*;
+import udemy.SpringFramework5Guru.springdi.dataSource.FakeDataSource;
 import udemy.SpringFramework5Guru.springdi.services.PrototypeBean;
 import udemy.SpringFramework5Guru.springdi.services.SingletonBean;
 
@@ -50,6 +51,12 @@ public class SpringDiApplication {
 		System.out.println(prototypeBean.getMyScope());
 		PrototypeBean prototypeBean2 = ctx.getBean(PrototypeBean.class);
 		System.out.println(prototypeBean2.getMyScope());
+
+		System.out.println("------ Property Source -------");
+		FakeDataSource fakeDataSource = ctx.getBean(FakeDataSource.class);
+		System.out.println(fakeDataSource.getUsername());
+		System.out.println(fakeDataSource.getPassword());
+		System.out.println(fakeDataSource.getJdbcurl());
 	}
 
 }
