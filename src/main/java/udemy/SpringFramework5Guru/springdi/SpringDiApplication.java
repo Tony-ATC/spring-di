@@ -4,6 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import udemy.SpringFramework5Guru.springdi.config.SfgConfiguration;
+import udemy.SpringFramework5Guru.springdi.config.SfgConstructorConfig;
 import udemy.SpringFramework5Guru.springdi.controllers.*;
 import udemy.SpringFramework5Guru.springdi.dataSource.FakeDataSource;
 import udemy.SpringFramework5Guru.springdi.services.PrototypeBean;
@@ -64,6 +65,12 @@ public class SpringDiApplication {
 		System.out.println(sfgConfiguration.getUsername());
 		System.out.println(sfgConfiguration.getPassword());
 		System.out.println(sfgConfiguration.getJdbcurl());
+
+		System.out.println("------ Constructor Binding -------");
+		SfgConstructorConfig sfgConstructorConfig = ctx.getBean(SfgConstructorConfig.class);
+		System.out.println(sfgConstructorConfig.getUsername());
+		System.out.println(sfgConstructorConfig.getPassword());
+		System.out.println(sfgConstructorConfig.getJdbcurl());
 	}
 
 }
