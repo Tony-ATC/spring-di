@@ -9,7 +9,6 @@ import udemy.SpringFramework5Guru.springdi.repositories.EnglishGreetingRepositor
 import udemy.SpringFramework5Guru.springdi.repositories.EnglishGreetingRepositoryImpl;
 import udemy.SpringFramework5Guru.springdi.services.*;
 
-@PropertySource("classpath:datasource.properties")
 @ImportResource("classpath:springdi-config.xml")
 @Configuration
 public class GreetingServiceConfig {
